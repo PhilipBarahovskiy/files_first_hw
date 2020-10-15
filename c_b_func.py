@@ -38,5 +38,18 @@ def get_shop_list_by_dishes(dishes, person_count):
         shop_list.update({key:res[key]})
       else:
         shop_list[key][att] += res[key][att]
-get_shop_list_by_dishes(['Запеченный картофель', 'Омлет', 'Утка по-пекински'], 3)
+
+def check_user(dishes, person_count):
+  user = dishes
+  for dish in user:
+    print(dish)
+    if cook_book.get(dish) == None:
+      print(f'{dish} does not exist, so was deleted')
+      dishes.pop(dishes.index(dish))
+
+dishes = input().split('/')
+person_count = int(input())
+
+check_user(dishes, person_count)
+get_shop_list_by_dishes(dishes, person_count)
 print(shop_list)
