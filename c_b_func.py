@@ -44,11 +44,11 @@ def check_user(dishes, person_count):
   for dish in user:
     print(dish)
     if cook_book.get(dish) == None:
-      print(f'{dish} does not exist, so was deleted')
+      print(f'{dish} does not exist, so has been deleted from input information.')
       dishes.pop(dishes.index(dish))
 
-dishes = input().split('/')
-person_count = int(input())
+dishes = input("Enter dishes through /.").split('/')
+person_count = int(input("Enter the number of guests."))
 
 check_user(dishes, person_count)
 get_shop_list_by_dishes(dishes, person_count)
