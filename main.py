@@ -1,6 +1,6 @@
-files_data = [['files/1.txt'],['files/2.txt'],['files/3.txt']]
+files_data = [['1.txt'],['2.txt'],['3.txt']]
 for file_data in files_data:
-  with open(file_data[0], encoding = "utf-8") as f:
+  with open(f'files/{file_data[0]}', encoding = "utf-8") as f:
     text = f.readlines()
     text[-1] += '\n'
     file_data += text
