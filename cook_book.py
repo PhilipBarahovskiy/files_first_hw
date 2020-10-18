@@ -8,9 +8,9 @@ def format_dish(dish,ingredients):
   return d
 
 cook_book = {}
-with open('recipes.txt') as f:
+with open('files/recipes.txt', encoding="utf-8") as f:
   data = f.readlines()
- 
+
 i = 0
 while i < len(data):
   dish = data[i].replace('\n','')
